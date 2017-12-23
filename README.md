@@ -1,5 +1,9 @@
 ## What is it?
-It is a library for snowfall on your website.
+It is a "Moon Sugar", library for snowfall on your website.
+
+## Where I can see demo?
+
+You can see [demo in here](https://hawkeyepierce89.github.io/Moon-Sugar/).
 
 ## How work with this?
 To initialize "Moon Sugar" you need add this library to your project:
