@@ -1,11 +1,11 @@
 ## What is it?
 It is a "Moon Sugar", library for snowfall on your website.
 
-## Where I can see demo?
+## Where can I see demo?
 
 You can see [demo in here](https://hawkeyepierce89.github.io/Moon-Sugar/).
 
-## How work with this?
+## How to work with this?
 To initialize "Moon Sugar" you need add this library to your project:
 ````html
 //old school
@@ -109,11 +109,13 @@ In this case you can set different types of snowflakes:
 }
 `````
 
-## Where I can get images for snow?
+## Where can I get images for snow?
 
 For example, you can get it [from this](https://www.flaticon.com/packs/snowflakes).
 
-Or you can install npm package
+## Can I install this from npm?
+
+Yes
 
 `````
 npm install moon-sugar

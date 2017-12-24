@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Snowfall for your site",
   "main": "dist/moon-sugar",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "get-document-size": "github:HawkeyePierce89/get-document-size",
     "window.requestanimationframe": "^1.0.1"
