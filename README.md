@@ -15,7 +15,7 @@ To initialize "Moon Sugar" you need add this library to your project:
 ````javascript
 //new school
 //TODO: make a normal import
-import * as MoonSugar from 'moon-sugar';
+import * as moonSugar from 'moon-sugar';
 `````
 
 Add element for snowflakes in your HTML
@@ -37,7 +37,7 @@ Add element for snowflakes in your HTML
 And run this:
 
 ````javascript
-MoonSugar.init();
+moonSugar.init();
 `````
 
 You also need to add styles:

@@ -12,6 +12,8 @@ let documentHeight;
 let classNameSnowflow;
 let countFlakesInSecons;
 let countFlakeTypes;
+let flakeWidth;
+let flakeHeight;
 
 export const init = (options = {}) => {
     switch (typeof options.element) {
@@ -35,7 +37,7 @@ export const init = (options = {}) => {
     root.style.width = `${documentWidth}px`;
     root.style.height = `${documentHeight}px`;
 
-    window.onresize = () => {
+    window.onresize = window.onload = () => {
         root.style.width = 'auto';
         root.style.height = 'auto';
 
@@ -98,6 +100,11 @@ const generate = () => {
             newFlake.DOM = root.lastElementChild;
 
             flakes.push(newFlake);
+
+            if (!flakeWidth) {
+                flakeWidth = newFlake.DOM.clientWidth;
+                flakeHeight = newFlake.DOM.clientHeight;
+            }
         }
     }
 };
@@ -108,12 +115,13 @@ const update = () => {
             element.y += element.vy;
             element.counter++;
 
-            if (element.y > documentHeight + 30) {
+            if (element.y > documentHeight + flakeHeight * 2) {
                 element.active = false;
                 deletedFlakes.push(index);
             } else {
                 element.x += element.vx + Math.cos(element.counter * element.coef) * element.dx;
-                if (element.x > -30 && element.x < documentWidth + 30) {
+
+                if (element.x > -flakeWidth * 2 && element.x < documentWidth + flakeWidth * 2) {
                     element.DOM.style.transform = `translate(${element.x}px, ${element.y}px)`;
                 }
             }
